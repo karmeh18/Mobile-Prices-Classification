@@ -1,0 +1,6 @@
+[ 2024-02-06 05:37:14,471 ] _internal.py 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-02-06 05:37:14,476 ] _internal.py 96 werkzeug - INFO -  * Debugger PIN: 911-243-831
+[ 2024-02-06 05:37:18,181 ] _internal.py 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 05:37:18] "GET / HTTP/1.1" 200 -
+[ 2024-02-06 05:37:27,246 ] _internal.py 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 05:37:27] "GET / HTTP/1.1" 200 -
+[ 2024-02-06 05:37:56,618 ] predict_pipeline.py 14 root - INFO - Model and preprocessor object has been loaded
+[ 2024-02-06 05:37:56,827 ] _internal.py 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 05:37:56] "POST /predictdata HTTP/1.1" 200 -

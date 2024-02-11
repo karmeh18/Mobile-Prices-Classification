@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: Phone-Price-Classification
+Version: 0.0.1
+Author: Karan Mehta
+Author-email: kmehta883@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: setuptools
+Requires-Dist: matplotlib
+Requires-Dist: Flask
+Requires-Dist: dill
+Requires-Dist: seaborn

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Range Prediction</title>
+</head>
+<body>
+
+
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Mobile Price Range Prediction</legend>
+        </h1>
+        <!-- n_cores -->
+        <div class="mb-3">
+            <label class="form-label">Number of Cores</label>
+            <select class="form-control" name="n_cores" required>
+                <option class="placeholder" selected disabled value="">Select Number of Cores</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+            </select>
+        </div>
+        <!-- pc -->
+        <div class="mb-3">
+            <label class="form-label">PC Category</label>
+            <select class="form-control" name="pc" required>
+                <option class="placeholder" selected disabled value="">Select PC Category</option>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+            </select>
+        </div>
+        <!-- blue -->
+        <div class="mb-3">
+            <label class="form-label">Blue (0 or 1)</label>
+            <select class="form-control" name="blue" required>
+                <option class="placeholder" selected disabled value="">Select Blue (No or Yes)</option>
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+            </select>
+        </div>
+        <!-- Numeric Fields -->
+        <div class="mb-3">
+            <label class="form-label">RAM</label>
+            <input class="form-control" type="number" name="ram" placeholder="Enter RAM" required />
+            <small class="form-text text-muted">
+                <strong style="font-size: 1.2em;">The range of RAM is from 256 MB to 4000 MB.</strong>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Screen Size</label>
+            <input class="form-control" type="number" name="screen_size" placeholder="Enter Screen Size" required />
+            <small class="form-text text-muted">
+                <strong style="font-size: 1.2em;">The range of screen size is from 4 inches to 30 inches.</strong>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Battery Power</label>
+            <input class="form-control" type="number" name="battery_power" placeholder="Enter Battery Power" required />
+            <small class="form-text text-muted">
+                <strong style="font-size: 1.2em;">The range of battery power is from 501 mah to 2000 mah.</strong>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Internal Memory</label>
+            <input class="form-control" type="number" name="int_memory" placeholder="Enter Internal Memory" required />
+            <small class="form-text text-muted">
+                <strong style="font-size: 1.2em;">The range of internal memory is from 2 GB to 64 GB.</strong>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Battery Backup Time</label>
+            <input class="form-control" type="number" name="talk_time" placeholder="Enter Battery Backup time" required />
+            <small class="form-text text-muted">
+                <strong style="font-size: 1.2em;">The range of Battery Backup time is from 2 hour to 20 hour.</strong>
+            </small>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict" required />
+        </div>
+    </form>
+    <h2>
+        The prediction for mobile's price range is that
+        <span style="color: blue;">{{results}}</span>
+    </h2>
+</div>
+
+</body>
+</html>
